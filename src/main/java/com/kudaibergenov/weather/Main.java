@@ -23,8 +23,8 @@ public class Main {
             }
 
             try {
-                Weather weather = service.getWeather(city);
-                System.out.println("Weather in " + weather.getCity() + ": " + weather.getTemperature() + "°C, " + weather.getDescription());
+                Weather weather = service.fetchAndSaveWeather(city);
+                System.out.println("Weather in " + weather.getCityName() + ": " + weather.getTemperature() + "°C, " + weather.getDescription());
                 System.out.println("Saved to database.");
             } catch (SQLException e) {
                 System.out.println("Database error: " + e.getMessage());

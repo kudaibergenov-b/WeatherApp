@@ -17,7 +17,7 @@ public class Weather {
         this.timestamp = timestamp;
     }
 
-    public String getCity() {
+    public String getCityName() {
         return city;
     }
 
