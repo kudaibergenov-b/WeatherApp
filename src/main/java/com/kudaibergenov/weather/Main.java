@@ -24,8 +24,8 @@ public class Main {
 
             try {
                 Weather weather = service.fetchAndSaveWeather(city);
-                System.out.println("Weather in " + weather.getCityName() + ": " + weather.getTemperature() + "°C, " + weather.getDescription());
-                System.out.println("Saved to database.");
+                System.out.print(weather.toString());
+                System.out.println();
             } catch (SQLException e) {
                 System.out.println("Database error: " + e.getMessage());
             } catch (Exception e) {

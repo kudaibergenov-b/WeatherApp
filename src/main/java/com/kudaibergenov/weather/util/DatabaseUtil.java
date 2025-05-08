@@ -6,9 +6,9 @@ import java.sql.DriverManager;
 import java.util.Properties;
 
 public class DatabaseUtil {
-    private static String url;
-    private static String username;
-    private static String password;
+    private static final String url;
+    private static final String username;
+    private static final String password;
 
     static {
         try (InputStream input = DatabaseUtil.class.getClassLoader().getResourceAsStream("db.properties")) {
