@@ -39,8 +39,10 @@ public class Weather {
 
     @Override
     public String toString() {
-        return "Weather in " + city +
-                ": " + temperature + "°C, feels like " + feelsLike + "°C, " + description +
-                " at " + timestamp;
+        return "Weather for " + city + "\n"
+                + "Temperature: " + temperature + " °C" + "\n"
+                + "Feels like: " + feelsLike + " °C" + "\n"
+                + "Description: " + description + "\n"
+                + "Time: " + timestamp;
     }
 }

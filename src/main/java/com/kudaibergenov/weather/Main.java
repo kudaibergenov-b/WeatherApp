@@ -22,9 +22,25 @@ public class Main {
                 break;
             }
 
+            if (city.isEmpty()) {
+                System.out.println("City name cannot be empty.");
+                continue;
+            }
+
+            if (city.length() > 100) {
+                System.out.println("City name is too long. Please enter a shorter name.");
+                continue;
+            }
+
+            if (!city.matches("[a-zA-Z\\s-]+")) {
+                System.out.println("City name can only contain letters, spaces, and hyphens.");
+                continue;
+            }
+
             try {
                 Weather weather = service.fetchAndSaveWeather(city);
-                System.out.print(weather.toString());
+                System.out.println();
+                System.out.println(weather.toString());
                 System.out.println();
             } catch (SQLException e) {
                 System.out.println("Database error: " + e.getMessage());
